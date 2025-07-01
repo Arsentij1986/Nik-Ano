@@ -1,0 +1,6 @@
+avstralopitek=str(input())
+homo_habilis=str(input())
+homo_erectus=str(input())
+neandertalec=str(input())
+homo_sapiens=str(input())
+print(avstralopitek, homo_habilis, homo_erectus, neandertalec, homo_sapiens, sep="=>")
