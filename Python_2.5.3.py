@@ -10,4 +10,4 @@ elif (x <= ivan) and (x > mike):
 elif (x > mike) and (x > ivan) and (x <= (mike + ivan)):
 	print("1")
 else:
-  print("0")
+	print("0")
