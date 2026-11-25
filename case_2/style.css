@@ -1,0 +1,62 @@
+/* Фон страницы — линейный градиент */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* центрирование по вертикали */
+  align-items: center;     /* центрирование по горизонтали */
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2b1055, #7597de);
+}
+
+/* Окошко результата */
+#result {
+  width: 140px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: red;   /* ноль — красный (стартовое значение) */
+  transition: background-color 0.3s;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Блок кнопок */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Кнопки: скругление 5px, фон — градиент */
+.btn {
+  font-size: 28px;
+  width: 80px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background: radial-gradient(circle at top left, #ff7e5f, #feb47b);
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Окно предупреждения */
+#warning {
+  min-height: 30px;
+  font-size: 18px;
+  color: #ffe08a;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
