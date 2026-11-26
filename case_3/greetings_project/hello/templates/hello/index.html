@@ -1,0 +1,34 @@
+<!-- hello/templates/hello/index.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Приветствие</title>
+    <link rel="stylesheet" href="{% static 'hello/style.css' %}">
+</head>
+<body>
+    <div class="card">
+        <h1>Как вас зовут?</h1>
+
+        {% if greeting %}
+            <p class="greeting">Привет, <span>{{ greeting }}</span>! Рады видеть вас 🎉</p>
+        {% endif %}
+
+        {% if last_name and not greeting %}
+            <p class="last-visitor">Последний гость: <span>{{ last_name }}</span></p>
+        {% endif %}
+
+        <form method="post" action="{% url 'index' %}" novalidate>
+            {% csrf_token %}  <!-- защита от CSRF-атак -->
+
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="error">{{ form.name.errors.0 }}</div>
+            {% endif %}
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

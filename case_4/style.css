@@ -1,0 +1,99 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #2c5364);
+    }
+
+    /* Набор для калькулятора */
+    .calculator {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      width: 360px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Вводные окна */
+    .inputs {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .inputs input {
+      width: 130px;
+      padding: 10px 12px;
+      font-size: 16px;
+      text-align: center;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .inputs input:focus {
+      border-color: #2c5364;
+    }
+
+    /* Кнопки операций */
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons button {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #2c5364, #0f2027);
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .buttons button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* Окно результата */
+    #result {
+      min-height: 54px;
+      padding: 14px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c5364;
+      background: #f1f5f9;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      word-break: break-word;
+    }
+
+    /* Если ошибка */
+    #result.error {
+      color: #d93025;
+      background: #fdecea;
+    }
